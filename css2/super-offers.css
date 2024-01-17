@@ -1,0 +1,27 @@
+.super-offers {
+    background: #eeeeee;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.super-offers>h3 {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.logo-detail {
+    color: var(--third-color);
+}
+
+.super-offers>p {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 420px) {
+    .super-offers {
+        background: #EEE;
+        padding: 1rem;
+        width: 375px;
+        border-radius: 2rem;
+    }
+}

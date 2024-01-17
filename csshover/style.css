@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+
+
+
+.card2 {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card2:hover {
+    height: 450px;
+}
+
+.card2 .img-box {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5s;
+}
+
+.card2:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+}
+
+.card2 .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card2 .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cardhover {
+    display: flex;
+    padding: 10%;
+    gap: 5%;
+    justify-content: center;
+}
+
+.card2:hover .content2 {
+    top: 130px;
+    height: 750px;
+}
+
+.card2 .read-more {
+    background: linear-gradient(90deg, #0a0e08, #30ce22);
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@media (max-width: 1800px) {
+
+    .cardhover {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 6rem;
+        column-gap: 0.5rem;
+    }
+
+    .card2 {
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        height: 360px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+
+    .card2 .content2 {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        position: absolute;
+        top: 260px;
+        width: 100%;
+        padding: 0px 30px;
+        text-align: center;
+        height: 50px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    body {
+        margin: 5rem 0 0;
+    }
+}
