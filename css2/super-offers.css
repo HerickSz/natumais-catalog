@@ -1,6 +1,6 @@
 .super-offers {
-    background: #eeeeee;
-    padding: 2rem;
+    background: #ffffff;
+
     border-radius: 2rem;
 }
 
@@ -19,8 +19,8 @@
 
 @media (max-width: 420px) {
     .super-offers {
-        background: #EEE;
-        padding: 1rem;
+        background: #ffffff;
+
         width: 375px;
         border-radius: 2rem;
     }
