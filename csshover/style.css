@@ -73,6 +73,15 @@
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+.card2 .read-more:hover {
+    background: linear-gradient(90deg, #30ce22, #0a0e08);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transform: scale(1.1);
 }
 
 @media (max-width: 1800px) {
