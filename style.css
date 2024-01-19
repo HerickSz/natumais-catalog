@@ -843,6 +843,11 @@ button.slick-next {
 /* medium devices: 767 > */
 
 @media (max-width: 420px) {
+  .header-image img {
+    width: 100vw;
+    display: none;
+  }
+
   h3 {
     padding-bottom: 10%;
   }
