@@ -643,10 +643,15 @@ button.slick-next {
 
 .header-image img {
   width: 100vw;
+
+}
+
+.imgdesktop img {
+  width: 100vw;
   display: flex;
 }
 
-.header-image>.imgmobile {
+.imgmobile {
   display: none;
 }
 
@@ -655,12 +660,12 @@ button.slick-next {
     padding: 10px 0;
   }
 
-  .header-image img {
+  .imgdesktop {
     width: 100vw;
     display: none;
   }
 
-  .header-image>.imgmobile {
+  .imgmobile {
     width: 100vw;
     display: flex;
   }
@@ -843,9 +848,19 @@ button.slick-next {
 /* medium devices: 767 > */
 
 @media (max-width: 420px) {
-  .header-image img {
+  .header-image {
+    width: 100vw;
+    display: flex;
+  }
+
+  .imgdesktop {
     width: 100vw;
     display: none;
+  }
+
+  .header-image>.imgmobile {
+    width: 100vw;
+    display: flex;
   }
 
   h3 {
