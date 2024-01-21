@@ -78,7 +78,7 @@ span {
         padding: 3rem;
         border: 1px solid #DDD;
         border-radius: 1rem;
-        gap: 1rem;
+        /*gap: 1rem;*/
     }
 
     .card a {
