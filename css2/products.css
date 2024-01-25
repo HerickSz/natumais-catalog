@@ -59,6 +59,11 @@
     right: 50px;
     left: 90px;
     width: 50%;
+    transition: 0.2s ease-in;
+}
+
+.card a:hover {
+    transform: scale(1.2);
 }
 
 h2 {
