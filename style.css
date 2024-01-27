@@ -247,7 +247,7 @@ nav .menu ul {
   display: none;
 }
 
-/* Mostrar menu */
+/* Mostrar menu 
 nav.show .menu {
   opacity: 1;
   visibility: visible;
@@ -260,6 +260,21 @@ nav.show .menu {
   display: grid;
   place-content: center;
 }
+*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: grid;
+  place-content: center;
+  border: 1px solid green;
+}
+
 
 nav.show .menu ul {
   display: grid;
@@ -653,6 +668,10 @@ button.slick-next {
   display: none;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 @media (max-width: 767px) {
   .header-image {
     padding: 10px 0;
@@ -895,6 +914,13 @@ button.slick-next {
   ul.slick-dots {
     display: flex;
     margin-left: 30%;
+  }
+
+  nav ul li a {
+    transition: color 0.2s;
+    position: relative;
+    background: #dbf3db;
+    border-radius: 20px;
   }
 
 }
