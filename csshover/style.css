@@ -102,10 +102,6 @@
         border: 1px solid green;
     }
 
-    .imgdesktop {
-        width: 100vw;
-    }
-
     .cardhover {
         display: flex;
         justify-content: space-around;
@@ -165,7 +161,4 @@
         border: 1px solid green;
     }
 
-    .imgmobile {
-        width: 100vw;
-    }
 }
