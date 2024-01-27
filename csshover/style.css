@@ -85,6 +85,22 @@
 }
 
 @media (max-width: 1800px) {
+    nav.show .menu {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-image: url(./images/backmobilenav2.png);
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        display: grid;
+        place-content: center;
+        border: 1px solid green;
+    }
 
     .cardhover {
         display: flex;
@@ -124,5 +140,24 @@
 
     body {
         margin: 5rem 0 0;
+    }
+}
+
+@media (max-width: 420px) {
+    nav.show .menu {
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-image: url(./images/backmobilenav.png);
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        display: grid;
+        place-content: center;
+        border: 1px solid green;
     }
 }
