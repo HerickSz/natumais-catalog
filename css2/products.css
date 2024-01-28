@@ -57,8 +57,6 @@
 .card a {
     position: absolute;
     top: 92%;
-    right: 50px;
-    left: 90px;
     width: 50%;
     transition: 0.2s ease-in;
 }
@@ -97,7 +95,7 @@ span {
         border-radius: 1rem;
         /* gap: 1rem; */
         font-size: 15px;
-        border-bottom: 5px solid green;
+        border-bottom: 5px solid #198754;
     }
 
     .cards-container {
@@ -124,7 +122,6 @@ span {
     .card a {
         position: absolute;
         top: 92%;
-        right: 50px px;
         left: 10px;
         width: 90%;
         padding: 0.3rem 1.5rem;
@@ -148,7 +145,16 @@ span {
         border-radius: 1rem;
         /* gap: 1rem; */
         font-size: 15px;
-        border-bottom: 5px solid green;
+        border-bottom: 5px solid #198754;
+    }
+
+    .card a {
+        position: absolute;
+        top: 90%;
+        right: 50px;
+        left: 5%;
+        width: 90%;
+        padding: 0.4rem 1rem;
     }
 }
 
@@ -188,14 +194,6 @@ span {
         width: 50%;
     }*/
 
-    .card a {
-        position: absolute;
-        top: 90%;
-        right: 50px;
-        left: 10px;
-        width: 90%;
-        padding: 0.4rem 1rem;
-    }
 
     .wrapper {
         width: auto;

@@ -9,7 +9,7 @@
 :root {
     --primary-color: #FFF;
     --secondary-color: #fc5959;
-    --third-color: #02d102;
+    --third-color: #198754;
     --fourth-color: #333;
 
     --site-util-width: min(100vw - 20px, 1300px);

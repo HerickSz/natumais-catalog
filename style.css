@@ -271,7 +271,7 @@ nav.show .menu {
   left: 0%;
   display: grid;
   place-content: center;
-  border: 1px solid green;
+  border: 1px solid #198754;
 }
 
 
@@ -508,7 +508,7 @@ footer .social a:hover {
 
 /* Back to top */
 .back-to-top {
-  background: #2df737;
+  background: #198754;
   color: var(--text-color-light);
 
   position: fixed;
@@ -876,7 +876,7 @@ ul {
     left: 0%;
     display: grid;
     place-content: center;
-    border: 1px solid green;
+    border: 1px solid #198754;
   }
 
   .header-image {
