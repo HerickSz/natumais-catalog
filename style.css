@@ -21,7 +21,7 @@ a {
 }
 
 .img2:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .ftlogo {
@@ -938,6 +938,17 @@ ul {
     text-align: center;
   }
 
+  .img2 {
+    width: 100% auto;
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    transform: scale(1.2);
+  }
+
+  .img2:hover {
+    transform: scale(1.4);
+  }
 
 
 }
