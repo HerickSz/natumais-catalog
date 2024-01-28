@@ -92,7 +92,6 @@ span {
         width: 170px;
         display: flex;
         flex-direction: column;
-        padding: 10px;
         height: 30rem;
         border: 1px solid #DDD;
         border-radius: 1rem;
@@ -150,6 +149,7 @@ span {
         /* gap: 1rem; */
         font-size: 15px;
         border-bottom: 5px solid green;
+        padding: 10px;
     }
 }
 
