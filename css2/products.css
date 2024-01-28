@@ -89,10 +89,10 @@ span {
     }
     */
     .card {
-        width: 160px;
+        width: 170px;
         display: flex;
         flex-direction: column;
-        /* padding: 3rem; */
+        padding: 10px;
         height: 30rem;
         border: 1px solid #DDD;
         border-radius: 1rem;
