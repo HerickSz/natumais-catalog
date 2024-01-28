@@ -140,7 +140,7 @@ span {
 
 @media (min-width: 400px) and (max-width: 1000px) {
     .card {
-        width: 170px;
+        width: 180px;
         display: flex;
         flex-direction: column;
         /* padding: 3rem; */
