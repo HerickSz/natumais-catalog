@@ -135,7 +135,7 @@ body {
 }
 
 .mapa {
-  margin-top: 1%;
+  margin-top: 5%;
   text-align: center;
 }
 
@@ -281,6 +281,7 @@ nav.show .menu ul {
 
 nav.show ul.grid {
   gap: 4rem;
+  font-size: 25px;
 }
 
 /* toggle menu */
@@ -933,6 +934,12 @@ ul {
     display: flex;
     margin-left: 30%;
   }
+
+  .mapa {
+    margin-top: 25%;
+    text-align: center;
+  }
+
 
 
 }
