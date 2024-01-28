@@ -44,6 +44,7 @@ body {
     color: var(--primary-color);
 }
 
+
 .hidden {
     visibility: hidden;
 }

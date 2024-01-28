@@ -423,7 +423,7 @@ nav.show div.icon-close {
   position: absolute;
   top: 90%;
   right: 50px;
-  left: 80px;
+  left: 25%;
   width: 50%;
 }
 
@@ -859,6 +859,7 @@ ul {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
+
 
 }
 

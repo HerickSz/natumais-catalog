@@ -156,6 +156,21 @@ span {
         width: 90%;
         padding: 0.4rem 1rem;
     }
+
+    .card .title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .tag {
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 0.3rem 1rem;
+        width: max-content;
+        border-radius: 2rem;
+        font-size: .6rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width: 1000px) {
