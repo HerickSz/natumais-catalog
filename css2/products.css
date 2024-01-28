@@ -90,12 +90,22 @@ span {
         width: 170px;
         display: flex;
         flex-direction: column;
-        height: 30rem;
+        height: auto;
         border: 1px solid #DDD;
         border-radius: 1rem;
         /* gap: 1rem; */
         font-size: 15px;
         border-bottom: 5px solid #198754;
+    }
+
+    .tag {
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        padding: 0.3rem 1rem;
+        width: max-content;
+        border-radius: 2rem;
+        font-size: .5rem;
+        margin-bottom: 0.5rem;
     }
 
     .cards-container {
