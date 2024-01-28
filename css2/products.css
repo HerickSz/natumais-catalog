@@ -135,6 +135,22 @@ span {
         width: auto;
         margin-inline: auto;
     }
+
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    .card {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        /* padding: 3rem; */
+        height: 32rem;
+        border: 1px solid #DDD;
+        border-radius: 1rem;
+        /* gap: 1rem; */
+        font-size: 15px;
+        border-bottom: 5px solid green;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -150,27 +166,16 @@ span {
         /*gap: 1rem;
     }
     */
-    .card {
-        width: 12rem;
-        display: flex;
-        flex-direction: column;
-        /* padding: 3rem; */
-        height: 32rem;
-        border: 1px solid #DDD;
-        border-radius: 1rem;
-        /* gap: 1rem; */
-        font-size: 15px;
-        border-bottom: 5px solid green;
-    }
+
 
     .cards-container {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        row-gap: 5rem;
-        column-gap: 0.5rem;
+        row-gap: 4rem;
+        column-gap: 0.1rem;
         background: #ffffff;
-        padding: 0px;
+        padding: 10px;
         border-radius: 2rem;
         text-align: center;
     }
