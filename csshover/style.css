@@ -159,7 +159,7 @@
         left: 0%;
         display: grid;
         place-content: center;
-        border: 1px solid green;
+        border-bottom: 5px solid green;
     }
 
 }
