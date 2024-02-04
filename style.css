@@ -24,6 +24,12 @@ a {
   transition: 0.2s ease-in;
 }
 
+.imgmarca {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
 .img2:hover {
   transform: scale(1.1);
 }
