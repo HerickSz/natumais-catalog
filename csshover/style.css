@@ -132,7 +132,7 @@ select:focus {
     color: #ff523b;
 }
 
-.card-info:hover>.info {
+.btinfo:hover>.info {
     cursor: pointer;
     display: block;
     background-color: #92ff7c;
@@ -143,7 +143,7 @@ select:focus {
     text-align: center;
 }
 
-.card-info:hover>.detalhes {
+.btinfo:hover>.button-buy {
     display: none;
     transition: .1s ease-in;
 }
