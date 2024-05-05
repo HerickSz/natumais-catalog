@@ -123,14 +123,17 @@ select:focus {
 
 
 .info {
+    width: 400px auto;
+    height: 300px auto;
+    padding: 5px;
     display: none;
-    transition: 5s;
-
+    transition: .1s ease-in;
 }
 
 .detalhes {
     color: #ff523b;
 }
+
 
 .btinfo:hover>.info {
     cursor: pointer;
@@ -141,7 +144,9 @@ select:focus {
     border: 1px solid transparent;
     border-radius: 10px;
     text-align: center;
+
 }
+
 
 .btinfo:hover>.button-buy {
     display: none;
