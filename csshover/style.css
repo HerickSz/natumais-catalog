@@ -123,8 +123,7 @@ select:focus {
 
 
 .info {
-    width: 400px auto;
-    height: 300px auto;
+    width: 100% auto;
     padding: 5px;
     display: none;
     transition: .1s ease-in;
