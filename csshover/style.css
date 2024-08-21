@@ -123,11 +123,16 @@ select:focus {
 
 
 .info {
-    width: 100% auto;
+    width: 100%;
     padding: 5px;
     display: none;
     transition: .1s ease-in;
+    color: #fff;
+    background-color: #198754;
+
 }
+
+
 
 .detalhes {
     color: #ff523b;
@@ -137,8 +142,8 @@ select:focus {
 .btinfo:hover>.info {
     cursor: pointer;
     display: block;
-    background-color: #92ff7c;
     position: absolute;
+    right: 5%;
     z-index: 999999;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -213,7 +218,9 @@ select:focus {
         margin: 5rem 0 0;
     }
 
+
 }
+
 
 @media (max-width: 420px) {
     nav.show .menu {
