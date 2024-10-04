@@ -624,17 +624,12 @@ button.slick-next {
   border-radius: 10px;
 }
 
-.slider-principal2 img {
-  border: 3px solid #ffffff;
-  cursor: pointer;
-  height: 100px;
-  border-radius: 10px;
-}
+
 
 .slider-principal2 img {
   /* border: 3px solid #198754; */
   cursor: pointer;
-  height: 400px;
+  height: 500px;
   max-width: 300px;
   border-radius: 10px;
 }
@@ -652,7 +647,7 @@ button.slick-next {
 
 .slider-principal2 {
 
-  max-width: 800px;
+  max-width: 700px;
   margin: 0px auto;
   transform: scale(1);
 }
@@ -933,6 +928,7 @@ ul {
     height: 550px;
     border-radius: 10px;
   }
+
 
   .mapa #wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
 
