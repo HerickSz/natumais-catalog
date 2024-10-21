@@ -39,6 +39,11 @@ a {
   height: 25px;
 }
 
+
+
+
+
+
 /*====  VARIABLES ============================ */
 :root {
   --header-height: 3.5rem;
@@ -436,6 +441,32 @@ nav.show div.icon-close {
   left: 25%;
   width: 50%;
 }
+
+.btn-primary{
+background-color: #198754;
+position: absolute;
+top: 93% !important;
+right: 25%;  
+width: 50%;
+border: none;
+}
+.btn-primary:hover{
+  background-color: #094b2c;
+}
+
+.btn-secondary{
+  background-color: #198754;
+}
+.btn-secondary:hover{
+  background-color: #094b2c;
+}
+.modal-body p{
+  font-size: larger;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+}
+
 
 .svgwpp {
   color: #e4e4e4;
