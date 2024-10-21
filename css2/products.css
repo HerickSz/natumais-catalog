@@ -89,6 +89,16 @@ span {
     }
     */
     
+    .btn-primary{
+        background-color: #198754;
+        position: absolute;
+        top: 90% !important;
+        right: 20%;  
+        width: 60%;
+        border: none;
+        }
+
+
     .card {
         width: 170px;
         display: flex;
