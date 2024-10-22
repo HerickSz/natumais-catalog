@@ -474,6 +474,11 @@ border: none;
 
 .imgmodal{
   height: 40vh;
+  transition: 0.3s;
+}
+
+.imgmodal:hover{
+  transform: scale(1.2);
 }
 
 
