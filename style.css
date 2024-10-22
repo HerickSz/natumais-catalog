@@ -463,8 +463,17 @@ border: none;
 .modal-body p{
   font-size: larger;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.imgmodal{
+  height: 40vh;
 }
 
 
