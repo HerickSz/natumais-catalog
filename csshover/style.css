@@ -5,15 +5,18 @@
 
 .card2 {
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
     width: 350px;
     height: 400px;
+    padding: 10px;
     position: relative;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
     cursor: pointer;
+    margin-top: 2%;
 }
 
 .card2:hover {
@@ -57,10 +60,13 @@
 
 .cardhover {
     display: flex;
-    padding: 5%;
+    flex-wrap: wrap;
+    padding: 10px;
     gap: 5%;
     justify-content: center;
 }
+
+
 
 .card2:hover .content2 {
     top: 130px;
