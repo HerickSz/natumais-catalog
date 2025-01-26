@@ -209,13 +209,13 @@ select:focus {
     .card2 .content2 {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 20px;
         position: absolute;
         top: 260px;
         width: 100%;
         padding: 0px 30px;
         text-align: center;
-        height: 50px;
+        height: 60px;
         overflow: hidden;
         transition: 0.5s;
     }
