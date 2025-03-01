@@ -66,6 +66,61 @@
             class="logo-detail">Novos Produtos!</span>
         </p>
 
+        <h1 class="searchh">Pesquisa de Produtos</h1>
+      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
+      <style>
+.searchh {
+  color: #28a745; 
+  text-align: center; 
+  font-size: 1.5em; 
+  margin: 20px 0; 
+}
+
+
+#searchInput {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 0 auto;
+    display: block;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+}
+
+
+#searchInput:focus {
+  border-color: #218838; 
+  outline: none; 
+}
+
+
+        
+.hidden {
+  display: none;
+}
+    </style>
+     <script>
+      function searchProducts() {
+          const input = document.getElementById('searchInput').value.toLowerCase();
+          const cards = document.querySelectorAll('.card');
+
+          cards.forEach(card => {
+              const title = card.querySelector('.title').textContent.toLowerCase();
+              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+              // Verifica se a entrada do usuário está contida no título ou no código
+              if (title.includes(input) || code.includes(input)) {
+                  card.classList.remove('hidden');
+              } else {
+                  card.classList.add('hidden');
+              }
+          });
+      }
+  </script>
+
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Fonte Verde Página 1</h2>
         <div class="page-btn">
           <a class="active-span" href="fonte-verde.html"><span style="background:#198754; color: #fff;">1</span></a>
@@ -253,18 +308,15 @@
             </div>
           </div>
           
-        </div>
-      </div>
-    </section>
+        
+   
+    
     </br></br>
 
     <div class="divider-1"></div>
 
 
-    <section class="product-list wrapper">
-
-
-      <div class="cards-container">
+    
         <div class="card">
           <p class="title">ANTI INFLAMATÓRIO C/60 CAPS</p>
           <img class="img2" src="../public/images/fonte verde/antiinflamatorio 60caps.png" alt="ANTI INFLAMATÓRIO C/60 CAPS">
@@ -527,18 +579,15 @@
           </div>
         </div>
         
-
-
-    </section>
     </br></br>
 
     <div class="divider-1"></div>
-    <section class="product-list wrapper">
+    
       <!--<h2 style="text-align: center;">produtos
         <span class="material-symbols-outlined">Totalmente Naturais</span>
       </h2><-->
 
-      <div class="cards-container">
+     
         <div class="card">
           <p class="title">CARTILAGEM DE TUBARÃO C/ 60 CAPS</p>
           <img class="img2" src="../public/images/fonte verde/CartiTubarao 60caps.png" alt="CARTILAGEM DE TUBARÃO C/ 60 CAPS">
