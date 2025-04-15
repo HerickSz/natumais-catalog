@@ -126,6 +126,10 @@ $('.slider-principal2').slick({
   autoplaySpeed: 5000,
 });
 
+
+
+
+
 /* pesquisa 
 
 function searchProducts() {
