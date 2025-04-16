@@ -76,7 +76,7 @@
     margin: 20px 0;
   }
 
-  #searchInput {
+ #searchInput {
     width: 60%;
     max-width: 400px;
     padding: 10px;
@@ -85,7 +85,7 @@
     font-size: 1em;
     margin: 0 auto 10px;
     display: block;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
   }
 
   #searchInput:focus {
@@ -96,13 +96,13 @@
   #searchInput::placeholder {
     color: #999;
     font-style: italic;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
   }
 
- 
+  /* Estilo fixo */
   .fixed-search {
     position: fixed;
-    top: 9%;
+    top: 7%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 7;
