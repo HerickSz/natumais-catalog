@@ -64,61 +64,86 @@
       </div>
 
       <div class="super-offers wrapper">
+<h1 class="searchh">Pesquisa de Produtos</h1>
+<input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
 
-        <h1 class="searchh">Pesquisa de Produtos</h1>
-      <input type="text" id="searchInput" placeholder="Pesquisar produto..." onkeyup="searchProducts()">
-      <style>
-.searchh {
-  color: #28a745; 
-  text-align: center; 
-  font-size: 1.5em; 
-  margin: 20px 0; 
-}
+<style>
+  .searchh {
+    color: #28a745;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
 
-
-#searchInput {
+  #searchInput {
     width: 60%;
     max-width: 400px;
     padding: 10px;
     border: 2px solid #28a745;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     display: block;
-    transition: border-color 0.3s;
-    margin-bottom: 10px;
-}
+    transition: all 0.3s ease;
+  }
 
+  #searchInput:focus {
+    border-color: #218838;
+    outline: none;
+  }
 
-#searchInput:focus {
-  border-color: #218838; 
-  outline: none; 
-}
+  #searchInput::placeholder {
+    color: #999;
+    font-style: italic;
+    transition: color 0.3s ease;
+  }
 
+  /* Estilo fixo */
+  .fixed-search {
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 7;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 
-        
-.hidden {
-  display: none;
-}
-    </style>
-     <script>
-      function searchProducts() {
-          const input = document.getElementById('searchInput').value.toLowerCase();
-          const cards = document.querySelectorAll('.card');
+  .hidden {
+    display: none;
+  }
+</style>
 
-          cards.forEach(card => {
-              const title = card.querySelector('.title').textContent.toLowerCase();
-              const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+<script>
+  function searchProducts() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
 
-              // Verifica se a entrada do usuário está contida no título ou no código
-              if (title.includes(input) || code.includes(input)) {
-                  card.classList.remove('hidden');
-              } else {
-                  card.classList.add('hidden');
-              }
-          });
+    cards.forEach(card => {
+      const title = card.querySelector('.title').textContent.toLowerCase();
+      const code = card.querySelector('.card-info .title').textContent.toLowerCase();
+
+      if (title.includes(input) || code.includes(input)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
       }
-  </script>
+    });
+  }
+
+  // Rola e fixa quando chega a 7% da altura da página
+  window.addEventListener('scroll', () => {
+    const input = document.getElementById('searchInput');
+    const scrollPercent = (window.scrollY / document.body.scrollHeight) * 100;
+
+    if (scrollPercent >= 7) {
+      input.classList.add('fixed-search');
+    } else {
+      input.classList.remove('fixed-search');
+    }
+  });
+</script>
+
 
         <h2 style="text-align: center;background-color: rgb(245 245 245);" class="title">Sol Natus Página 2</h2>
         <div class="page-btn">
