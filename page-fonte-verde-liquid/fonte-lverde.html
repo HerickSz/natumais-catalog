@@ -127,8 +127,7 @@
       }
     });
   }
-
-  // Rola e fixa quando chega a 7% da altura da página
+// Rola e fixa quando chega a 7% da altura da página
   window.addEventListener('scroll', () => {
     const input = document.getElementById('searchInput');
     const scrollPercent = (window.scrollY / document.body.scrollHeight) * 100;
@@ -139,6 +138,18 @@
       input.classList.remove('fixed-search');
     }
   });
+</script>
+<script>
+  // Faz o input "chacoalhar" a cada X segundos, se estiver fixo
+setInterval(() => {
+  const input = document.getElementById('searchInput');
+  if (input.classList.contains('fixed-search')) {
+    input.classList.add('shake-it');
+    setTimeout(() => input.classList.remove('shake-it'), 400); // dura o tempo da animação
+  }
+}, 8000); // a cada 8 segundos (ajustável)
+
+</script>
 </script>
 
 
