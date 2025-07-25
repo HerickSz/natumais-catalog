@@ -21,6 +21,13 @@
     border-bottom: 5px solid green;
 }
 
+ /*alinhamento*/
+.card .title {
+    height: 3rem;
+    white-space: wrap;
+    font-weight:100;
+    text-align: center;
+} /*alinhamento*/
 
 .card>img {
     border-radius: 1rem;
