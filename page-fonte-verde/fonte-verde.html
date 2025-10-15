@@ -181,17 +181,18 @@
         const doc = parser.parseFromString(html, 'text/html');
         const cards = doc.querySelectorAll('.card');
 
-              cards.forEach(card => {
+       cards.forEach(card => {
+  // Ignora cards vazios
+  if (!card.textContent.trim()) return;
+
   const textoCard = card.textContent.toLowerCase();
 
   if (textoCard.includes(input)) {
-    // Extrai ID único baseado no modal ou parte do texto
+    // Extrai ID único baseado no modal ou trecho do texto
     const botao = card.querySelector('button[data-bs-target]');
-    const modalId = botao
-      ? botao.getAttribute('data-bs-target')
-      : textoCard.slice(0, 80); // usa um trecho do texto como ID se não houver botão/modal
+    const modalId = botao?.getAttribute('data-bs-target')?.trim() || textoCard.slice(0, 80);
 
-    // Garante que não adicione duplicado
+    // Evita duplicados
     if (!idsAdicionados.has(modalId)) {
       idsAdicionados.add(modalId);
       resultado.appendChild(card.cloneNode(true));
