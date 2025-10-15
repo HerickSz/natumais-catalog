@@ -208,13 +208,37 @@
     }
   });
 
-  setInterval(() => {
+setInterval(() => {
     const input = document.getElementById('searchInput');
     if (input.classList.contains('fixed-search')) {
       input.classList.add('shake-it');
       setTimeout(() => input.classList.remove('shake-it'), 400);
     }
   }, 8000);
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('searchInput');
+    if (input) {
+      input.addEventListener('keypress', async (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+
+          // Executa a busca
+          await searchProducts();
+
+          // Verifica se há resultados antes de rolar
+          const resultado = document.getElementById('resultado');
+          const temResultados = resultado && resultado.querySelectorAll('.card').length > 0;
+
+          if (temResultados) {
+            // 🔝 Rola suavemente até o início do #resultado
+            resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
+  });
+
+
 </script>
 
 
