@@ -151,48 +151,46 @@
     return pagina;
   }
 
-  // Função para buscar produtos
+   // Função para buscar produtos
   async function searchProducts() {
-    const input = document.getElementById('searchInput').value.trim().toLowerCase();
-    const resultado = document.getElementById('resultado') || criarResultado();
-    resultado.innerHTML = '';
+  const input = document.getElementById('searchInput').value.trim().toLowerCase();
+  const resultado = document.getElementById('resultado') || criarResultado();
+  resultado.innerHTML = '';
 
-    if (input.length < 2) return;
+  if (input.length < 2) return;
 
-    const idsAdicionados = new Set();
+  // ✅ Set para controlar duplicados, criado no início da função
+  const idsAdicionados = new Set();
 
-    for (const pagina of paginas) {
-      try {
-        const res = await fetch(corrigirCaminho(location.pathname, pagina));
-        const html = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const cards = doc.querySelectorAll('.card');
+  for (const pagina of paginas) {
+    try {
+      const res = await fetch(corrigirCaminho(location.pathname, pagina));
+      const html = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const cards = doc.querySelectorAll('.card');
 
-       cards.forEach(card => {
-  // Ignora cards vazios
-  if (!card.textContent.trim()) return;
+      // ✅ cards.forEach
+      cards.forEach(card => {
+        if (!card.textContent.trim()) return;
 
-  const textoCard = card.textContent.toLowerCase();
+        const textoCard = card.textContent.toLowerCase();
+        if (textoCard.includes(input)) {
+          const botao = card.querySelector('button[data-bs-target]');
+          const modalId = card.id || botao?.getAttribute('data-bs-target')?.trim() || textoCard.slice(0, 80);
 
-  if (textoCard.includes(input)) {
-    // Extrai ID único baseado no modal ou trecho do texto
-    const botao = card.querySelector('button[data-bs-target]');
-    const modalId = botao?.getAttribute('data-bs-target')?.trim() || textoCard.slice(0, 80);
+          if (!idsAdicionados.has(modalId)) {
+            idsAdicionados.add(modalId);
+            resultado.appendChild(card.cloneNode(true));
+          }
+        }
+      });
 
-    // Evita duplicados
-    if (!idsAdicionados.has(modalId)) {
-      idsAdicionados.add(modalId);
-      resultado.appendChild(card.cloneNode(true));
+    } catch (e) {
+      console.warn(`Erro ao buscar ${pagina}:`, e);
     }
   }
-});
-
-      } catch (e) {
-        console.warn(`Erro ao buscar ${pagina}:`, e);
-      }
-    }
-  }
+}
 
   function criarResultado() {
     const div = document.createElement('div');

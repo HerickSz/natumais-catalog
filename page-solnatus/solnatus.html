@@ -180,11 +180,11 @@
   const textoCard = card.textContent.toLowerCase();
 
   if (textoCard.includes(input)) {
-    // Extrai ID único baseado no modal ou trecho do texto
+    // Extrai ID único baseado no próprio id do card, botão/modal ou texto
     const botao = card.querySelector('button[data-bs-target]');
-    const modalId = botao?.getAttribute('data-bs-target')?.trim() || textoCard.slice(0, 80);
+    const modalId = card.id || botao?.getAttribute('data-bs-target')?.trim() || textoCard.slice(0, 80);
 
-    // Evita duplicados
+    // Garante que não adicione duplicado
     if (!idsAdicionados.has(modalId)) {
       idsAdicionados.add(modalId);
       resultado.appendChild(card.cloneNode(true));
