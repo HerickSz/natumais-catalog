@@ -168,20 +168,23 @@
         const doc = parser.parseFromString(html, 'text/html');
         const cards = doc.querySelectorAll('.card');
 
-        cards.forEach(card => {
-          const textoCard = card.textContent.toLowerCase();
+              cards.forEach(card => {
+  const textoCard = card.textContent.toLowerCase();
 
-          if (textoCard.includes(input)) {
-            // Tenta extrair o ID único do botão/modal
-            const botao = card.querySelector('button[data-bs-target]');
-            const modalId = botao ? botao.getAttribute('data-bs-target') : card.innerHTML;
+  if (textoCard.includes(input)) {
+    // Extrai ID único baseado no modal ou parte do texto
+    const botao = card.querySelector('button[data-bs-target]');
+    const modalId = botao
+      ? botao.getAttribute('data-bs-target')
+      : textoCard.slice(0, 80); // usa um trecho do texto como ID se não houver botão/modal
 
-            if (!idsAdicionados.has(modalId)) {
-              resultado.appendChild(card.cloneNode(true));
-              idsAdicionados.add(modalId);
-            }
-          }
-        });
+    // Garante que não adicione duplicado
+    if (!idsAdicionados.has(modalId)) {
+      idsAdicionados.add(modalId);
+      resultado.appendChild(card.cloneNode(true));
+    }
+  }
+});
 
       } catch (e) {
         console.warn(`Erro ao buscar ${pagina}:`, e);
